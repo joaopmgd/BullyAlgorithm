@@ -1,7 +1,7 @@
 import java.io.Serializable;
 
-/**
- * Created by joao on 03/10/15.
+/*
+  Created by joao on 03/10/15.
  */
 
 public class Message implements Serializable{
@@ -39,9 +39,5 @@ public class Message implements Serializable{
 
     public int getPid() {
         return pid;
-    }
-
-    public void printMessage(){
-        System.out.println("Message\n- Pid: "+this.pid+"\n- Message: "+this.message);
     }
 }

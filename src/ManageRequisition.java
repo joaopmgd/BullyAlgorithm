@@ -1,5 +1,5 @@
-/**
- * Created by joao on 03/10/15.
+/*
+  Created by joao on 03/10/15.
  */
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -42,13 +42,5 @@ public class ManageRequisition extends Thread{
     @Override
     public void run() {
         readMessage();
-    }
-
-    public void closeConnection(){
-        try {
-            socket.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

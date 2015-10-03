@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-/**
- * Created by joao on 03/10/15.
+/*
+  Created by joao on 03/10/15.
  */
 public class Main {
 
@@ -35,12 +35,19 @@ public class Main {
         p5.connectAll("localhost", processList);
         p6.connectAll("localhost", processList);
 
-        p1.startElection();
+        p4.startElection();
 
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
+        System.out.println("\n\nElection ended!\n\n");
+        for(Process process: processList){
+            System.out.println("Process: "+process.getCoordinator()+" is COORDINATOR of Process: "+process.getPid());
+        }
 
-//        p1.closeConnection();
-//        p2.closeConnection();
-//        p3.closeConnection();
+        System.exit(0);
     }
 }

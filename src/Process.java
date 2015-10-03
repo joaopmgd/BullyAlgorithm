@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-/**
- * Created by joao on 03/10/15.
+/*
+  Created by joao on 03/10/15.
  */
 
 public class Process extends Thread{
@@ -23,6 +23,9 @@ public class Process extends Thread{
         this.startedElection = false;
     }
 
+    public int getCoordinator() {
+        return coordinator;
+    }
 
     public void setCoordinator(int coordinator){
         this.coordinator = coordinator;
@@ -64,11 +67,5 @@ public class Process extends Thread{
     public void run(){
         startListening();
     }
-
-    public void closeConnection(){
-        server.closeConnection();
-        client.closeConnection();
-    }
-
 }
 

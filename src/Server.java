@@ -1,5 +1,5 @@
-/**
- * Created by joao on 03/10/15.
+/*
+  Created by joao on 03/10/15.
  */
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -55,15 +55,5 @@ public class Server extends Thread {
     @Override
     public void run() {
         receiveMessage();
-    }
-
-    public void closeConnection(){
-        try {
-            for(ManageRequisition stream : streams)
-                stream.closeConnection();
-            serverSocket.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
