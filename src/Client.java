@@ -75,15 +75,6 @@ public class Client extends Thread{
         }
     }
 
-    public void closeConnection(){
-        try {
-            for(ConnectedClient connectedClient : this.connectedClients)
-                connectedClient.getSocket().close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     public void run(){
         sendMessage();
     }

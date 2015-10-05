@@ -54,7 +54,7 @@ public class Process extends Thread{
     }
 
     public void startElection(){
-        System.out.println("Process: "+this.pid+" is stating an election");
+        System.out.println("Process: "+this.pid+" is starting an election");
         client.start();
         this.startedElection = true;
     }
